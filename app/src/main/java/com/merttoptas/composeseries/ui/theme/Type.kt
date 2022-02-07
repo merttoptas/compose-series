@@ -32,8 +32,9 @@ val Typography = Typography(
     ),
     subtitle1 = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.W600,
-        fontSize = 18.sp,
+        fontWeight = FontWeight.Light,
+        fontSize = 16.sp,
+        letterSpacing = 0.sp
     ),
     subtitle2 = TextStyle(
         fontFamily = Poppins,
