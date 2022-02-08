@@ -15,15 +15,17 @@ val Poppins = FontFamily(
 )
 
 val Typography = Typography(
-    h3 = TextStyle(
+    h1 = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.W600,
-        fontSize = 32.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+        letterSpacing = 0.sp
     ),
-    h4 = TextStyle(
+    h2 = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.W600,
-        fontSize = 30.sp
+        fontWeight = FontWeight.Bold    ,
+        fontSize = 14.sp,
+        letterSpacing = .15.sp,
     ),
     h5 = TextStyle(
         fontFamily = Poppins,
@@ -43,9 +45,10 @@ val Typography = Typography(
     ),
     body1 = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    ),
+        fontWeight = FontWeight.Light,
+        fontSize = 14.sp,
+        letterSpacing = 0.sp,
+        ),
     body2 = TextStyle(
         fontFamily = Poppins,
         fontWeight = FontWeight.W500,
