@@ -1,25 +1,22 @@
 package com.merttoptas.composeseries.ui.screen
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.focusModifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.merttoptas.composeseries.R
-import java.util.*
+import com.merttoptas.composeseries.ui.component.BloomButton
+import com.merttoptas.composeseries.ui.component.BloomText
 
 @Composable
 fun WelcomeScreen() {
     Surface(color = MaterialTheme.colors.primary, modifier = Modifier.fillMaxSize()) {
-          Box(
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
         ) {
@@ -111,7 +108,7 @@ fun BloomLogo() {
 
 @Composable
 fun BloomText(modifier: Modifier) {
-    Text(
+    BloomText(
         modifier = modifier.paddingFromBaseline(top = 32.dp, bottom = 40.dp),
         text = "Beautiful home garden solutions",
         color = MaterialTheme.colors.onBackground,
@@ -127,21 +124,24 @@ fun LogInTextButton(modifier: Modifier) {
             .padding(horizontal = 32.dp)
             .defaultMinSize(minHeight = 50.dp),
         content = {
-            Text(text = "Log in", color = MaterialTheme.colors.secondary)
+            BloomText(
+                modifier = Modifier,
+                text = "Log in",
+                color = MaterialTheme.colors.secondary,
+                style = MaterialTheme.typography.subtitle1,
+            )
         }
     )
 }
 
 @Composable
 fun CreateAccountButton(modifier: Modifier) {
-    Button(
+    BloomButton(
         onClick = { /*TODO*/ },
-        shape = RoundedCornerShape(50),
         modifier = modifier
-            .fillMaxWidth()
             .padding(horizontal = 16.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.onPrimary),
-    ) {
-        Text(text = "Create Account", color = Color.White)
-    }
+        text = "Create Account",
+        borderColor = MaterialTheme.colors.onPrimary
+    )
 }
