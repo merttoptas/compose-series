@@ -14,8 +14,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeSeriesTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    //WelcomeScreen()
-                    HomeScreen()
+                    WelcomeScreen()
+                    //HomeScreen()
                 }
             }
         }

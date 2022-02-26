@@ -56,7 +56,7 @@ fun WelcomeScreen() {
         }
 
         /*
-             //Way two
+        Way two
      WelcomeBackground(modifier = Modifier)
      Column(
          modifier = Modifier.fillMaxSize(),
