@@ -25,6 +25,7 @@ import coil.compose.rememberImagePainter
 import com.merttoptas.composeseries.data.DummyData
 import com.merttoptas.composeseries.data.Plant
 import com.merttoptas.composeseries.data.Theme
+import com.merttoptas.composeseries.ui.component.BloomTextField
 
 @Composable
 fun HomeScreen() {
@@ -70,16 +71,19 @@ fun HomeScreen() {
 
 @Composable
 fun SearchEditText(modifier: Modifier) {
-    OutlinedTextField(
+    BloomTextField(
+        modifier = modifier,
         value = "",
         onValueChange = {},
-        modifier = modifier,
-        singleLine = true,
-        placeholder = { Text(text = "Search", style = MaterialTheme.typography.body1) },
-        textStyle = MaterialTheme.typography.body1,
+        placeholder = {
+            com.merttoptas.composeseries.ui.component.BloomText(
+                modifier = modifier,
+                text = "Search",
+                style = MaterialTheme.typography.body1
+            )
+        },
         visualTransformation = VisualTransformation.None,
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
-        shape = RoundedCornerShape(10.dp),
         leadingIcon = {
             Icon(
                 imageVector = Icons.Default.Search,
